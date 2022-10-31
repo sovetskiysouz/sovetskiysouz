@@ -49,84 +49,87 @@ int main()
     double rDom = 1;
     int yLegs1 = 550;
     int yLegs2 = 550;
-/*
+    int xLegs = 200;
     while(raketa>-500)
-    {
+    {   txBegin();
         FON(TX_WHITE);
         raketazuzuzuzu(raketa);
 
         raketa=raketa-10;
         txSleep(1);
+txEnd();
     }
-*/
+
 
     while(yDom>480)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yDom-=5;
         txSleep(10);
-    }
+  txEnd();  }
 
     while(yLegs1>515)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs1-=5;
         txSleep(10);
-    }
+    txEnd();}
 
     while(yLegs1<550)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs1+=5;
         txSleep(10);
-    }
+    txEnd();}
 
     while(yLegs2>515)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs2-=5;
         txSleep(10);
-    }
+    txEnd();}
 
     while(yLegs2<550)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs2+=5;
         txSleep(10);
-    }
+    txEnd();}
 
     while(rDom>0.5)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         rDom-=0.05;
         txSleep(10);
-    }
+txEnd();    }
 
     while(yDom>-500)
-    {
+    { txBegin();
         FON(TX_WHITE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, 1);
         yDom-=15;
         txSleep(10);
-    }
+    txEnd();}
 
+
+    while(yDom<-499)
+    { FON(TX_WHITE);
+     drawLegs(xLegs, yLegs1, yLegs2);
+     xLegs=xLegs+10;
+ txSleep(1);   }
 txTextCursor (false);
 return 0;
-
 }
-
-
-
