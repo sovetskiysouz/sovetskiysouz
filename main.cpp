@@ -1,4 +1,22 @@
 #include "TXLib.h"
+
+void CHELOVEK(int x,int y)
+{txSetColor (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txCircle(y+300-300,y+350-350, 25);
+    txRectangle(290,350,310,470);
+
+    POINT leftLeg[4] = {{x+290-290, y+470-470}, {x+310-310, y+470-470}, {x+240-240,y+ 570-570}, {x+220-220, y+570-570}};
+          txPolygon (leftLeg, 4);
+    POINT rightLeg[4] = {{x+290-290, y+470-470}, {x+310-310,y+ 470-470}, {x+360-360,y+ 570-570}, {x+340, y+570-570}};
+          txPolygon (rightLeg, 4);
+    POINT leftrukibazuki[4] = {{x+290-290,y+370-370}, {x+310-310,y+ 370-370}, {x+240-240,y+470-470}, {x+220-220, y+470-470}};
+          txPolygon (leftrukibazuki, 4);
+POINT rightrukibazuki[4] = {{x+290-290, y+370-370}, {x+310-310,y+370-370}, x+360,y+470-470}, {x+340,y+ 470}};
+          txPolygon (rightrukibazuki, 4);
+
+}
+
 void dom(int x,int y, double r)
 {
     txSetColor (TX_BLACK);
@@ -50,6 +68,7 @@ int main()
     int yLegs1 = 550;
     int yLegs2 = 550;
     int xLegs = 200;
+    int xCHELOVEK =
     while(raketa>-500)
     {   txBegin();
         FON(TX_WHITE);
@@ -125,11 +144,37 @@ txEnd();    }
     txEnd();}
 
 
-    while(yDom<-499)
+    while(xLegs<899)
     { FON(TX_WHITE);
      drawLegs(xLegs, yLegs1, yLegs2);
      xLegs=xLegs+10;
- txSleep(1);   }
+     txSleep(10);
+    }
+ raketa=800;
+
+    while(xLegs>899)
+{
+CHELOVEK();
+raketazuzuzuzu(raketa);
+raketa=raketa+10;
+}
+
+
+
+
+
+
+
+
 txTextCursor (false);
 return 0;
+
+
+
+
+
+
+
+
+
 }

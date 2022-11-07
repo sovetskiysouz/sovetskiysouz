@@ -1,0 +1,41 @@
+
+#include "TXLib.h"
+void FON()
+{
+txSetColor(RGB(6,6,6));
+txSetFillColor(TX_BLUE);
+ txRectangle(0,0,800,600);
+}
+
+
+
+
+void R8(int x){
+txSetColor(RGB(6,6,6));
+txSetFillColor(RGB(6,6,6));
+txEllipse(510,300,700,450);
+txRectangle(700,290,x,480);
+
+}
+int main()
+    {
+    txCreateWindow (800, 600);
+    int raketa=800;
+
+
+    txTextCursor (false);
+    return 0;
+  while(raketa>800)  
+    {txBegin();
+    FON();
+R8(raketa);
+    
+    
+    
+    
+    
+    
+    
+     }
+    }
+
