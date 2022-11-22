@@ -1,22 +1,68 @@
 #include "TXLib.h"
+void CHELOVEK3OLEGA(int x,int y)
+{
+    //x=300 y=350
 
-void CHELOVEK(int x,int y)
-{txSetColor (TX_BLACK);
+txSetColor (TX_BLACK);
     txSetFillColor (TX_BLACK);
-    txCircle(y+300-300,y+350-350, 25);
-    txRectangle(290,350,310,470);
-
-    POINT leftLeg[4] = {{x+290-290, y+470-470}, {x+310-310, y+470-470}, {x+240-240,y+ 570-570}, {x+220-220, y+570-570}};
+    txCircle(x+300-300,y+350-350, 25);
+    txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
+    POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
           txPolygon (leftLeg, 4);
-    POINT rightLeg[4] = {{x+290-290, y+470-470}, {x+310-310,y+ 470-470}, {x+360-360,y+ 570-570}, {x+340, y+570-570}};
+    POINT rightLeg[4] = {{x+290-300, y+470-350}, {x+310-300,y+ 470-350}, {x+360-300,y+ 570-350}, {x+340-300, y+570-350}};
           txPolygon (rightLeg, 4);
-    POINT leftrukibazuki[4] = {{x+290-290,y+370-370}, {x+310-310,y+ 370-370}, {x+240-240,y+470-470}, {x+220-220, y+470-470}};
+    POINT leftrukibazuki[4] = {{x+290-300,y+370-350}, {x+310-300,y+370-350}, {x+240-300,y+470-350}, {x+220-300, y+470-350}};
           txPolygon (leftrukibazuki, 4);
-POINT rightrukibazuki[4] = {{x+290-290, y+370-370}, {x+310-310,y+370-370}, x+360,y+470-470}, {x+340,y+ 470}};
+    POINT rightrukibazuki[4] = {{x+290-300, y+370-350}, {x+310-300,y+370-350}, {x+360-300,y+470-350}, {x+340-300,y+470-350}};
           txPolygon (rightrukibazuki, 4);
 
-}
 
+
+}
+void CHELOVEK(int x,int y)
+{
+    //x=300 y=350
+
+txSetColor (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txCircle(x+300-300,y+350-350, 25);
+    txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
+    POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
+          txPolygon (leftLeg, 4);
+    POINT rightLeg[4] = {{x+290-300, y+470-350}, {x+310-300,y+ 470-350}, {x+360-300,y+ 570-350}, {x+340-300, y+570-350}};
+          txPolygon (rightLeg, 4);
+    POINT leftrukibazuki[4] = {{x+290-300,y+370-350}, {x+310-300,y+370-350}, {x+240-300,y+470-350}, {x+220-300, y+470-350}};
+          txPolygon (leftrukibazuki, 4);
+    POINT rightrukibazuki[4] = {{x+290-300, y+370-350}, {x+310-300,y+370-350}, {x+360-300,y+470-350}, {x+340-300,y+470-350}};
+          txPolygon (rightrukibazuki, 4);
+
+
+
+}
+void CHELOVEK2(int x,int y)
+{
+    //x=300 y=350
+    txSetColor (RGB(10,72,0));
+    txSetFillColor (RGB(10,72,0));
+    txCircle(x+300-300,y+350-350, 25);
+    txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
+
+    POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
+          txPolygon (leftLeg, 4);
+    POINT rightLeg[4] = {{x+290-300, y+470-350}, {x+310-300,y+ 470-350}, {x+360-300,y+ 570-350}, {x+340-300, y+570-350}};
+          txPolygon (rightLeg, 4);
+    POINT leftrukibazuki[4] = {{x+200-300,y+370-350}, {x+200-300,y+390-350}, {x+300-300,y+390-350}, {x+300-300, y+370-350}};
+          txPolygon (leftrukibazuki, 4);
+    POINT rightrukibazuki[4] = {{x+290-300, y+370-350}, {x+310-300,y+370-350}, {x+360-300,y+470-350}, {x+340-300,y+470-350}};
+          txPolygon (rightrukibazuki, 4);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txRectangle(x+160-300,280,x+200-300,300);
+    txRectangle(x+190-300,300,x+200-300,310);
+
+
+}
 void dom(int x,int y, double r)
 {
     txSetColor (TX_BLACK);
@@ -48,6 +94,13 @@ void raketazuzuzuzu(int x)
     txRectangle(x+730-430,220,x+800-430,420);
 }
 
+void raketazuzuzuzu1(int x)
+{
+    txSetColor(RGB(6,6,6));
+    txSetFillColor(RGB(6,6,6));
+    txEllipse(x+430-430,210,x+730-430,420);
+    txRectangle(x+360-430,220,x+430-430,420);
+}
 void drawLegs(int x, int y1, int y2)
 {
     txSetColor(RGB(6,6,6));
@@ -56,11 +109,18 @@ void drawLegs(int x, int y1, int y2)
     txRectangle(x+290-200,y2+480-550, x+340-200, y2+550-550);
 }
 
+void drawPulya(int x, int y)
+{
+ //x=100 y=100
+ txPie (x, y, x+80, y+20, 90, 180);
+
+}
+
 
 int main()
 {
     txCreateWindow (800, 600);
-    int raketa=800;
+    int xRaketa=800;
     int drrem;
     int xDom = 160;
     int yDom = 550;
@@ -68,21 +128,26 @@ int main()
     int yLegs1 = 550;
     int yLegs2 = 550;
     int xLegs = 200;
-    int xCHELOVEK =
-    while(raketa>-500)
-    {   txBegin();
-        FON(TX_WHITE);
-        raketazuzuzuzu(raketa);
+    int xCHELOVEK =290;
+    int yCHELOVEK =270;
+    int xCHELOVEK2 =600;
+    int yCHELOVEK2 =270;
+    int xPULYTOP=100;
+    while(xRaketa>-500)
+    {
+        txBegin();
+        FON(TX_BLUE);
+        raketazuzuzuzu(xRaketa);
 
-        raketa=raketa-10;
+        xRaketa=xRaketa-100;
         txSleep(1);
-txEnd();
+        txEnd();
     }
 
 
-    while(yDom>480)
+/*    while(yDom>480)
     { txBegin();
-        FON(TX_WHITE);
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yDom-=5;
@@ -90,8 +155,8 @@ txEnd();
   txEnd();  }
 
     while(yLegs1>515)
-    { txBegin();
-        FON(TX_WHITE);
+    { txBegin();TX_BLUE
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs1-=5;
@@ -100,7 +165,7 @@ txEnd();
 
     while(yLegs1<550)
     { txBegin();
-        FON(TX_WHITE);
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs1+=5;
@@ -109,7 +174,7 @@ txEnd();
 
     while(yLegs2>515)
     { txBegin();
-        FON(TX_WHITE);
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs2-=5;
@@ -118,7 +183,7 @@ txEnd();
 
     while(yLegs2<550)
     { txBegin();
-        FON(TX_WHITE);
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         yLegs2+=5;
@@ -127,7 +192,7 @@ txEnd();
 
     while(rDom>0.5)
     { txBegin();
-        FON(TX_WHITE);
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, rDom);
         rDom-=0.05;
@@ -136,7 +201,7 @@ txEnd();    }
 
     while(yDom>-500)
     { txBegin();
-        FON(TX_WHITE);
+        FON(TX_BLUE);
         drawLegs(200, yLegs1, yLegs2);
         dom(xDom,yDom, 1);
         yDom-=15;
@@ -145,22 +210,58 @@ txEnd();    }
 
 
     while(xLegs<899)
-    { FON(TX_WHITE);
-     drawLegs(xLegs, yLegs1, yLegs2);
+    { FON(TX_BLUE);
+     drawLegs(xLegs, yLTX_BLUEegs1, yLegs2);
      xLegs=xLegs+10;
      txSleep(10);
     }
- raketa=800;
 
-    while(xLegs>899)
+    xRaketa=-100;
+
+    while(xRaketa<179)
 {
-CHELOVEK();
-raketazuzuzuzu(raketa);
-raketa=raketa+10;
+    FON(TX_BLUE);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    raketazuzuzuzu1(xRaketa);
+    xRaketa=xRaketa+10;
+    txSleep(50);
+}
+
+   while(yCHELOVEK>170)
+{
+    FON(TX_BLUE);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    raketazuzuzuzu1(xRaketa);
+    yCHELOVEK=yCHELOVEK-10;
+    txSleep(50);
+}
+
+while(yCHELOVEK<170)
+{
+    FON(TX_BLUE);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    raketazuzuzuzu1(xRaketa);
+    xCHELOVEK=xCHELOVEK+10;
+    xRaketa=xRaketa+10;
+    txSleep(50);
 }
 
 
+xPULYTOP = xCHELOVEK2-180;
+while (xPULYTOP > -500)
+{
+    FON(TX_BLUE);
+   (xCHELOVEK,yCHELOVEK);
+    CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
+    drawPulya(xPULYTOP, yCHELOVEK2+10);
 
+
+    xPULYTOP=xPULYTOP-20;
+    txSleep(1);
+}
+*/
+
+ CHELOVEK(xCHELOVEK,yCHELOVEK);
 
 
 
@@ -169,12 +270,12 @@ raketa=raketa+10;
 txTextCursor (false);
 return 0;
 
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+

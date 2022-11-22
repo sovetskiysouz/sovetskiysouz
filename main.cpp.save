@@ -1,41 +1,202 @@
-
 #include "TXLib.h"
-void FON()
+
+void CHELOVEK(int x,int y)
 {
-txSetColor(RGB(6,6,6));
-txSetFillColor(TX_BLUE);
- txRectangle(0,0,800,600);
+    //x=300 y=350
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_BLACK);
+    txCircle(x+300-300,y+350-350, 25);
+    txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
+
+    POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
+          txPolygon (leftLeg, 4);
+    POINT rightLeg[4] = {{x+290-300, y+470-350}, {x+310-300,y+ 470-350}, {x+360-300,y+ 570-350}, {x+340-300, y+570-350}};
+          txPolygon (rightLeg, 4);
+    POINT leftrukibazuki[4] = {{x+290-300,y+370-350}, {x+310-300,y+370-350}, {x+240-300,y+470-350}, {x+220-300, y+470-350}};
+          txPolygon (leftrukibazuki, 4);
+    POINT rightrukibazuki[4] = {{x+290-300, y+370-350}, {x+310-300,y+370-350}, {x+360-300,y+470-350}, {x+340-300,y+470-350}};
+          txPolygon (rightrukibazuki, 4);
+}
+
+void dom(int x,int y, double r)
+{
+    txSetColor (TX_BLACK);
+    txSetFillColor (TX_RED);
+    txRectangle (x, y-300*r, x+220, y);
+    POINT tri[3] = {{x, y-300*r}, {x+110, y-410*r}, {x+220,y-300*r}};
+    txPolygon (tri, 3);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor(RGB(139,85,58));
+    txRectangle(x+200,y-140*r,x+140,y);
+
+    txSetColor (TX_BLACK);
+    txSetFillColor(TX_BLUE);
+    txRectangle(x+30,y-200*r,x+80,y-120*r);
+}
+void FON(COLORREF Col)
+{
+    txSetColor(RGB(6,6,6));
+    txSetFillColor(Col);
+    txRectangle(0,0,800,600);
+}
+
+void raketazuzuzuzu(int x)
+{
+    txSetColor(RGB(6,6,6));
+    txSetFillColor(RGB(6,6,6));
+    txEllipse(x+430-430,210,x+730-430,420);
+    txRectangle(x+730-430,220,x+800-430,420);
 }
 
 
-
-
-void R8(int x){
-txSetColor(RGB(6,6,6));
-txSetFillColor(RGB(6,6,6));
-txEllipse(510,300,700,450);
-txRectangle(700,290,x,480);
-
+void drawLegs(int x, int y1, int y2)
+{
+    txSetColor(RGB(6,6,6));
+    txSetFillColor(RGB(6,6,6));
+    txRectangle(x+200-200,y1+480-550, x+250-200, y1+550-550);
+    txRectangle(x+290-200,y2+480-550, x+340-200, y2+550-550);
 }
+
+
 int main()
-    {
+{
     txCreateWindow (800, 600);
-    int raketa=800;
+    int xRaketa=800;
+    int drrem;
+    int xDom = 160;
+    int yDom = 550;
+    double rDom = 1;
+    int yLegs1 = 550;
+    int yLegs2 = 550;
+    int xLegs = 200;
+    int xCHELOVEK =290;
+    int yCHELOVEK =270;
 
+    while(xRaketa>-500)
+    {   txBegin();
+        FON(TX_WHITE);
+        raketazuzuzuzu(xRaketa);
 
-    txTextCursor (false);
-    return 0;
-  while(raketa>800)  
-    {txBegin();
-    FON();
-R8(raketa);
-    
-    
-    
-    
-    
-    
-    
-     }
+        xRaketa=xRaketa-10;
+        txSleep(1);
+txEnd();
     }
 
+
+    while(yDom>480)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, rDom);
+        yDom-=5;
+        txSleep(10);
+  txEnd();  }
+
+    while(yLegs1>515)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, rDom);
+        yLegs1-=5;
+        txSleep(10);
+    txEnd();}
+
+    while(yLegs1<550)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, rDom);
+        yLegs1+=5;
+        txSleep(10);
+    txEnd();}
+
+    while(yLegs2>515)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, rDom);
+        yLegs2-=5;
+        txSleep(10);
+    txEnd();}
+
+    while(yLegs2<550)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, rDom);
+        yLegs2+=5;
+        txSleep(10);
+    txEnd();}
+
+    while(rDom>0.5)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, rDom);
+        rDom-=0.05;
+        txSleep(10);
+txEnd();    }
+
+    while(yDom>-500)
+    { txBegin();
+        FON(TX_WHITE);
+        drawLegs(200, yLegs1, yLegs2);
+        dom(xDom,yDom, 1);
+        yDom-=15;
+        txSleep(10);
+    txEnd();}
+
+
+    while(xLegs<899)
+    { FON(TX_WHITE);
+     drawLegs(xLegs, yLegs1, yLegs2);
+     xLegs=xLegs+10;
+     txSleep(10);
+    }
+
+    xRaketa=-100;
+
+    while(xRaketa<219)
+{
+    FON(TX_WHITE);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    raketazuzuzuzu1(xRaketa);
+    xRaketa=xRaketa+10;
+    txSleep(50);
+}
+
+   while(yCHELOVEK>209)
+{
+    FON(TX_WHITE);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    raketazuzuzuzu(xRaketa);
+    yCHELOVEK=yCHELOVEK-10;
+    txSleep(50);
+}
+
+while(yCHELOVEK<209)
+{
+    FON(TX_WHITE);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    raketazuzuzuzu(xRaketa);
+    xCHELOVEK=xCHELOVEK+10;
+    xRaketa=xRaketa+10;
+    txSleep(50);
+}
+
+
+
+
+txTextCursor (false);
+return 0;
+
+
+
+
+
+
+
+
+
+}
