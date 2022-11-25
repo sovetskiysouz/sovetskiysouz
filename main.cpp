@@ -1,22 +1,28 @@
 #include "TXLib.h"
-void CHELOVEK3OLEGA(int x,int y)
+void drawPulya(int x, int y)
 {
-    //x=300 y=350
+ //x=240 y=520
+ txPie (x, y, x+80, y+20, 90, 180);
 
-txSetColor (TX_BLACK);
-    txSetFillColor (TX_BLACK);
-    txCircle(x+300-300,y+350-350, 25);
-    txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
-    POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
-          txPolygon (leftLeg, 4);
-    POINT rightLeg[4] = {{x+290-300, y+470-350}, {x+310-300,y+ 470-350}, {x+360-300,y+ 570-350}, {x+340-300, y+570-350}};
-          txPolygon (rightLeg, 4);
-    POINT leftrukibazuki[4] = {{x+290-300,y+370-350}, {x+310-300,y+370-350}, {x+240-300,y+470-350}, {x+220-300, y+470-350}};
-          txPolygon (leftrukibazuki, 4);
-    POINT rightrukibazuki[4] = {{x+290-300, y+370-350}, {x+310-300,y+370-350}, {x+360-300,y+470-350}, {x+340-300,y+470-350}};
-          txPolygon (rightrukibazuki, 4);
+}
+
+void CHELOVEK3OLEGA()
+{
 
 
+   txSetColor (TX_BLACK);
+   txSetFillColor (TX_BLACK);
+   txRectangle(240,510,360,520);
+   txRectangle(280,490,330,510);
+   POINT dddd[4] = {{280,530}, {300,520}, {330,540}, {310,560}};
+          txPolygon (dddd, 4);
+   txCircle(400,490, 25);
+   POINT fgfhfh[4] = {{400,520}, {410,510}, {440,520}, {440,540}};
+   txPolygon (fgfhfh, 4);
+   txRectangle(430,510,590,540);
+    POINT nnnn[4] = {{580,510}, {590,520}, {690,480}, {690,470}};
+   txPolygon (nnnn, 4);
+   txRectangle(590,530,680,540);
 
 }
 void CHELOVEK(int x,int y)
@@ -109,7 +115,7 @@ void drawLegs(int x, int y1, int y2)
     txRectangle(x+290-200,y2+480-550, x+340-200, y2+550-550);
 }
 
-void drawPulya(int x, int y)
+void drawPulya2(int x, int y)
 {
  //x=100 y=100
  txPie (x, y, x+80, y+20, 90, 180);
@@ -261,9 +267,15 @@ while (xPULYTOP > -500)
 }
 */
 
- CHELOVEK(xCHELOVEK,yCHELOVEK);
+
+while ();
+{
 
 
+
+
+
+}
 
 
 
