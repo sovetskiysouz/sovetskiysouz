@@ -1,7 +1,80 @@
 #include "TXLib.h"
-void drawPulya(int x, int y)
+void titra()
 {
- //x=240 y=520
+          txSetColor     (TX_BLACK);
+          txSetFillColor (TX_DARKGRAY); Win32::RoundRect (txDC(), 105, 205, 705, 405, 30, 30);
+          txSetFillColor (TX_WHITE);    Win32::RoundRect (txDC(), 100, 200, 700, 400, 30, 30);
+
+          txSelectFont ("Arial", 20, 0, FW_BOLD);
+          txDrawText   (100, 250, 700, 350, "Êîòèêè ãîâîðÿò:  Ìÿó!,\n"
+                                            "Ñîáà÷êè ãîâîðÿò: Ãàâ!,\n\n"
+                                            "Ïðîãðàììèñòû ãîâîðÿò: Òû ÊÎÌÌÈÒ ÍÀ ÃÈÒÕÀÁ ÑÄÅËÀË?!?!!");
+
+
+
+
+
+
+
+
+
+
+}
+//void soldat (int x);
+//{
+
+
+
+
+
+
+
+
+
+
+//}
+//void sirota (int y);
+//{
+
+
+
+
+
+
+
+//}
+
+void stenka (int y)
+{
+txSetColor (TX_RED);
+txSetFillColor (TX_RED);
+txRectangle(290,y+200-200,50,y+500-200) ;
+
+}
+
+void CHELOVEK3(int x,int y)
+{
+    //x=300 y=350
+
+
+   txSetColor (TX_GREEN);
+    txSetFillColor (TX_GREEN);
+    txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
+    POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
+          txPolygon (leftLeg, 4);
+    POINT rightLeg[4] = {{x+290-300, y+470-350}, {x+310-300,y+ 470-350}, {x+360-300,y+ 570-350}, {x+340-300, y+570-350}};
+          txPolygon (rightLeg, 4);
+    POINT leftrukibazuki[4] = {{x+290-300,y+370-350}, {x+310-300,y+370-350}, {x+240-300,y+470-350}, {x+220-300, y+470-350}};
+          txPolygon (leftrukibazuki, 4);
+    POINT rightrukibazuki[4] = {{x+290-300, y+370-350}, {x+310-300,y+370-350}, {x+360-300,y+470-350}, {x+340-300,y+470-350}};
+          txPolygon (rightrukibazuki, 4);
+
+
+}
+
+void drawPulya2(int x, int y)
+{
+ //x=240 y=510
  txPie (x, y, x+80, y+20, 90, 180);
 
 }
@@ -12,26 +85,39 @@ void CHELOVEK3OLEGA()
 
    txSetColor (TX_BLACK);
    txSetFillColor (TX_BLACK);
-   txRectangle(240,510,360,520);
+   txRectangle(270,510,290,570);
+   txRectangle(240,510,370,530);
+   txRectangle(270,510,330,510);
+    txRectangle(280,490,330,510);
    txRectangle(280,490,330,510);
    POINT dddd[4] = {{280,530}, {300,520}, {330,540}, {310,560}};
           txPolygon (dddd, 4);
-   txCircle(400,490, 25);
+   txCircle(400,490, 30);
    POINT fgfhfh[4] = {{400,520}, {410,510}, {440,520}, {440,540}};
    txPolygon (fgfhfh, 4);
    txRectangle(430,510,590,540);
     POINT nnnn[4] = {{580,510}, {590,520}, {690,480}, {690,470}};
    txPolygon (nnnn, 4);
    txRectangle(590,530,680,540);
+   txRectangle(350,510,370,560);
+   POINT nn[6] = {{320,540}, {350,570}, {370,540}, {380,550}, {350,590}, {310,560}};
+   txPolygon (nn, 6);
 
 }
+void golovanemcha(COLORREF Col,int y)
+{
+    txSetColor (TX_BLACK);
+    txSetFillColor (Col);
+    txCircle(290,y+270-270, 25);
+}
+
 void CHELOVEK(int x,int y)
 {
     //x=300 y=350
 
-txSetColor (TX_BLACK);
+
+   txSetColor (TX_BLACK);
     txSetFillColor (TX_BLACK);
-    txCircle(x+300-300,y+350-350, 25);
     txRectangle(x+290-300,y+350-350,x+310-300,y+470-350);
     POINT leftLeg[4] = {{x+290-300, y+470-350}, {x+310-300, y+470-350}, {x+240-300,y+ 570-350}, {x+220-300, y+570-350}};
           txPolygon (leftLeg, 4);
@@ -115,7 +201,7 @@ void drawLegs(int x, int y1, int y2)
     txRectangle(x+290-200,y2+480-550, x+340-200, y2+550-550);
 }
 
-void drawPulya2(int x, int y)
+void drawPulya(int x, int y)
 {
  //x=100 y=100
  txPie (x, y, x+80, y+20, 90, 180);
@@ -139,6 +225,25 @@ int main()
     int xCHELOVEK2 =600;
     int yCHELOVEK2 =270;
     int xPULYTOP=100;
+    int yOLOKA=270;
+    int STENA228=200;
+    int xCHELOVEK3=290;
+    int yCHELOVEK3=270;
+    int xPULYTOP2=240;
+    int yPULYTOP2=510;
+    int ffffff=0;
+
+
+
+
+
+txClear();
+titra();
+
+
+
+
+
     while(xRaketa>-500)
     {
         txBegin();
@@ -251,31 +356,71 @@ while(yCHELOVEK<170)
     xRaketa=xRaketa+10;
     txSleep(50);
 }
-
+*/
 
 xPULYTOP = xCHELOVEK2-180;
-while (xPULYTOP > -500)
-{
+while (xPULYTOP > 270)
+{   txBegin();
     FON(TX_BLUE);
-   (xCHELOVEK,yCHELOVEK);
+    stenka(STENA228);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
     CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
+    golovanemcha(TX_BLACK,yOLOKA);
     drawPulya(xPULYTOP, yCHELOVEK2+10);
-
 
     xPULYTOP=xPULYTOP-20;
     txSleep(1);
+    txEnd();
 }
-*/
 
-
-while ();
+while (ffffff < 20)
 {
+ txBegin();
+    FON(TX_BLUE);
+    stenka(STENA228);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
+    golovanemcha(TX_RED,yOLOKA);
+    drawPulya(xPULYTOP, yCHELOVEK2+10);
+    ffffff=ffffff+10;
+
+    txSleep(1);
+    txEnd();
 
 
 
+    while (xPULYTOP2>-99)
+{  txBegin();
+
+     FON(TX_BLUE);
+   CHELOVEK3OLEGA();
+   drawPulya2( xPULYTOP2,yPULYTOP2);
+   CHELOVEK(xCHELOVEK,yCHELOVEK);
+   golovanemcha(TX_BLACK,yOLOKA);
 
 
+
+   txEnd();
 }
+
+
+     xCHELOVEK =99999;
+     yCHELOVEK =99999;
+     xCHELOVEK2 =99999;
+     yCHELOVEK2 =99999;
+     xPULYTOP=99999;
+     yOLOKA=99999;
+     STENA228=99999;
+     xCHELOVEK3=99999;
+     yCHELOVEK3=99999;
+
+while (xPULYTOP2<-90)
+{
+  FON(TX_BLUE);
+  CHELOVEK3OLEGA();
+  drawPulya2(xPULYTOP2,yPULYTOP2);
+}
+
 
 
 
@@ -284,7 +429,7 @@ return 0;
 
 }
 
-
+}
 
 
 
