@@ -100,7 +100,7 @@ void CHELOVEK3OLEGA()
    txPolygon (nnnn, 4);
    txRectangle(590,530,680,540);
    txRectangle(350,510,370,560);
-   POINT nn[6] = {{320,540}, {350,570}, {370,540}, {380,550}, {350,590}, {310,560}};
+   POINT nn[6] = {{370,540}, {400,560}, {430,530}, {450,530}, {400,570}, {360,550}};
    txPolygon (nn, 6);
 
 }
@@ -379,7 +379,7 @@ while (ffffff < 20)
     FON(TX_BLUE);
     stenka(STENA228);
     CHELOVEK(xCHELOVEK,yCHELOVEK);
-    CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
+   // CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
     golovanemcha(TX_RED,yOLOKA);
     drawPulya(xPULYTOP, yCHELOVEK2+10);
     ffffff=ffffff+10;
@@ -392,11 +392,11 @@ while (ffffff < 20)
     while (xPULYTOP2>-99)
 {  txBegin();
 
-     FON(TX_BLUE);
-   CHELOVEK3OLEGA();
-   drawPulya2( xPULYTOP2,yPULYTOP2);
-   CHELOVEK(xCHELOVEK,yCHELOVEK);
-   golovanemcha(TX_BLACK,yOLOKA);
+    FON(TX_BLUE);
+    CHELOVEK3OLEGA();
+    drawPulya2( xPULYTOP2,yPULYTOP2);
+    //CHELOVEK(xCHELOVEK,yCHELOVEK);
+    golovanemcha(TX_BLACK,yOLOKA);
 
 
 
@@ -404,15 +404,6 @@ while (ffffff < 20)
 }
 
 
-     xCHELOVEK =99999;
-     yCHELOVEK =99999;
-     xCHELOVEK2 =99999;
-     yCHELOVEK2 =99999;
-     xPULYTOP=99999;
-     yOLOKA=99999;
-     STENA228=99999;
-     xCHELOVEK3=99999;
-     yCHELOVEK3=99999;
 
 while (xPULYTOP2<-90)
 {
