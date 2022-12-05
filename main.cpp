@@ -1,38 +1,44 @@
 #include "TXLib.h"
 void titra()
 {
-          txSetColor     (TX_BLACK);
-          txSetFillColor (TX_DARKGRAY); Win32::RoundRect (txDC(), 105, 205, 705, 405, 30, 30);
-          txSetFillColor (TX_WHITE);    Win32::RoundRect (txDC(), 100, 200, 700, 400, 30, 30);
-
-          txSelectFont ("Arial", 20, 0, FW_BOLD);
-          txDrawText   (100, 250, 700, 350, "Котики говорят:  Мяу!,\n"
-                                            "Собачки говорят: Гав!,\n\n"
-                                            "Программисты говорят: Ты КОММИТ НА ГИТХАБ СДЕЛАЛ?!?!!");
+      txSetColor     (TX_RED);
+      txSetFillColor (TX_RED);
 
 
+      txSelectFont ("Arial", 40, 0, FW_BOLD);
+      txDrawText   (100, 250, 700, 550, "Котики говорят:  Мяу!,\n"
+                                        "Собачки говорят: Гав!,\n\n"
+                                        "Программисты говорят: Ты КОММИТ НА ГИТХАБ СДЕЛАЛ?!?!!\n"
+                                        "Котики говорят:  Мяу!,\n"
+                                        "Котики говорят:  Мяу!,\n"
+                                        "Котики говорят:  Мяу!,\n"
+                                        "Котики говорят:  Мяу!,\n"
+                                        "Котики говорят:  Мяу!,\n"
 
 
+                    );
 
+}
+void soldat (int x);
+{
+txCircle(100,320,20);
+txRectangle(90,340,100,440);
+  POINT leftLeg[4] = {{90,340}, {20,430}, {40,430}, {80,360}};
+          txPolygon (leftLeg, 4);
 
+  POINT leftLeg[4] = {{110,340}, {160,430}, {140,430}, {110,380}};
+          txPolygon (leftLeg, 4);
+
+  POINT leftLeg[4] = {{90,440}, {20,530}, {40,530}, {100,460}};
+          txPolygon (leftLeg, 4);
+
+  POINT leftLeg[4] = {{110,440}, {160,540}, {140,540}, {100,450}};
+          txPolygon (leftLeg, 4);
 
 
 
 
 }
-//void soldat (int x);
-//{
-
-
-
-
-
-
-
-
-
-
-//}
 //void sirota (int y);
 //{
 
@@ -239,7 +245,7 @@ int main()
 
 txClear();
 titra();
-
+txSleep(1000);
 
 
 
@@ -378,8 +384,8 @@ while (ffffff < 20)
  txBegin();
     FON(TX_BLUE);
     stenka(STENA228);
-    CHELOVEK(xCHELOVEK,yCHELOVEK);
-   // CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
+   CHELOVEK(xCHELOVEK,yCHELOVEK);
+   CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
     golovanemcha(TX_RED,yOLOKA);
     drawPulya(xPULYTOP, yCHELOVEK2+10);
     ffffff=ffffff+10;
@@ -396,7 +402,7 @@ while (ffffff < 20)
     CHELOVEK3OLEGA();
     drawPulya2( xPULYTOP2,yPULYTOP2);
     //CHELOVEK(xCHELOVEK,yCHELOVEK);
-    golovanemcha(TX_BLACK,yOLOKA);
+    //golovanemcha(TX_BLACK,yOLOKA);
 
 
 
