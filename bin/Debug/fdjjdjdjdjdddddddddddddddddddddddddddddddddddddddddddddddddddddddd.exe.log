@@ -36,3 +36,79 @@ Run file:	D:\Новая папка\fdjjdjdjdjddddddddddddddddddddddddddddddddddddddddddddd
 Directory:	D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14245, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdre0, Thread: 0x2964 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419463 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: txPlayVideo() at c:/codeblocks/codeblocks/mingw/include/txlib.h (14245)
+# 1 0x00419EDD in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: txPlayVideo() at c:/codeblocks/codeblocks/mingw/include/txlib.h (14397)
+# 2 0x00403F4C in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: _txCleanup() at c:/codeblocks/codeblocks/mingw/include/txlib.h (9082)
+# 3 0x004038B9 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: _txOnCExit() at c:/codeblocks/codeblocks/mingw/include/txlib.h (8894)
+# 4 0x00401284 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: __mingw_CRTStartup()
+# 5 0x004012C5 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: WinMainCRTStartup()
+# 6 0x77D97BBE in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+# 7 0x77D97B8E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec  9 2022 17:22:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 09 2022 17:22:36
+
+Run file:	D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe
+Directory:	D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14245, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdre0, Thread: 0x137C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419463 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: txPlayVideo() at c:/codeblocks/codeblocks/mingw/include/txlib.h (14245)
+# 1 0x00419EDD in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: txPlayVideo() at c:/codeblocks/codeblocks/mingw/include/txlib.h (14397)
+# 2 0x00403F4C in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: _txCleanup() at c:/codeblocks/codeblocks/mingw/include/txlib.h (9082)
+# 3 0x004038B9 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: _txOnCExit() at c:/codeblocks/codeblocks/mingw/include/txlib.h (8894)
+# 4 0x00401284 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: __mingw_CRTStartup()
+# 5 0x004012C5 in D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe: WinMainCRTStartup()
+# 6 0x77D97BBE in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+# 7 0x77D97B8E in C:\Windows\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec  9 2022 17:23:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Dec 09 2022 17:23:28
+
+Run file:	D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd\bin\Debug\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd.exe
+Directory:	D:\Новая папка\fdjjdjdjdjdddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+
+--------------------------------------------------
