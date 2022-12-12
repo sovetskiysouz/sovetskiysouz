@@ -26,29 +26,30 @@ void titra()
                     );
 
 }
-void soldat (int x)
-{           //x=160
+void soldat (int x, int y, float raz)
+{           //x=160 y=320
     txSetColor (TX_BLACK);
     txSetFillColor (TX_GREEN);
-    txCircle(100-160+x,320,20);
-    txRectangle(90-160+x,340,110-160+x,440);
-    POINT leftruka[4] = {{110-160+x,340}, {160-160+x,430}, {140-160+x,430}, {110-160+x,370}};
+    txCircle(-60*raz+x,y,20*raz);
+    txRectangle(-70*raz+x,y+20*raz,-50*raz+x,y+120*raz);
+
+    POINT leftruka[4] = {{x-50*raz,y+20*raz}, {x,y+110*raz}, {-20*raz+x,y+110*raz}, {-50*raz+x,y+50*raz}};
     txPolygon (leftruka, 4);
 
-    POINT rightruka[4] = {{90-160+x,340}, {20-160+x,430}, {40-160+x,430}, {90-160+x,370}};
+    POINT rightruka[4] = {{-70*raz+x,y+20*raz}, {x+-140*raz,y+110*raz}, {x+-120*raz,y+110*raz}, {-70*raz+x,y+50*raz}};
     txPolygon (rightruka, 4);
 
-    POINT  leftnoga [4] = {{110-160+x,440},{160-160+x,540}, {140-160+x,540}, {100-160+x,450}};
+    POINT  leftnoga [4] = {{-50*raz+x,y+120*raz},{x,y+220*raz}, {-20*raz+x,y+220*raz}, {-60*raz+x,y+130*raz}};
     txPolygon (leftnoga, 4);
 
-    POINT rightnoga[4] = {{90-160+x,440}, {20-160+x,540}, {40-160+x,540}, {110-160+x,435}};
+    POINT rightnoga[4] = {{-70*raz+x,y+120*raz}, {-140*raz+x,y+220*raz}, {-120*raz+x,y+220*raz}, {-50*raz+x,y+120*raz}};
     txPolygon (rightnoga, 4);
 
 
 
 
 }
-//void sirota (int y);
+//void sirota (int x);
 //{
 
 
@@ -61,9 +62,9 @@ void soldat (int x)
 
 void stenka (int y)
 {
-txSetColor (TX_RED);
-txSetFillColor (TX_RED);
-txRectangle(290,y+200-200,50,y+500-200) ;
+    txSetColor (TX_RED);
+    txSetFillColor (TX_RED);
+    txRectangle(290,y+200-200,50,y+500-200) ;
 
 }
 
@@ -247,7 +248,7 @@ int main()
     int xPULYTOP2=240;
     int yPULYTOP2=510;
     int ffffff=0;
-    int xCHELC=160;
+    int xCHELC=0;
 
 
 
@@ -395,10 +396,10 @@ while (ffffff < 20)
 {
  txBegin();
     FON(TX_BLUE);
-     trava();
+    trava();
     stenka(STENA228);
-   CHELOVEK(xCHELOVEK,yCHELOVEK);
-   CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
+    CHELOVEK(xCHELOVEK,yCHELOVEK);
+    CHELOVEK2(xCHELOVEK2,yCHELOVEK2);
     golovanemcha(TX_RED,yOLOKA);
     drawPulya(xPULYTOP, yCHELOVEK2+10);
     ffffff=ffffff+10;
@@ -410,7 +411,7 @@ while (ffffff < 20)
 while (xPULYTOP2<-90)
 {
   FON(TX_BLUE);
-   trava();
+  trava();
   CHELOVEK3OLEGA();
   drawPulya2(xPULYTOP2,yPULYTOP2);
 }
@@ -419,14 +420,37 @@ while (xCHELC<950)
 {
     txBegin();
     FON(TX_BLUE);
-     trava();
-    soldat(xCHELC);
+    trava();
+    soldat(xCHELC, 320, 1);
 
     xCHELC=xCHELC+10;
     txSleep(1);
     txEnd();
 
 }
+
+xCHELC=0;
+int xCHELC1=950;
+
+while (xCHELC<400)
+{
+    txBegin();
+    FON(TX_BLUE);
+    trava();
+    soldat(xCHELC,320, 1);
+    soldat(xCHELC1-50, 410, 0.8);
+
+    xCHELC=xCHELC+10;
+    xCHELC1-=10;
+    txSleep(1);
+    txEnd();
+
+}
+
+
+
+
+
 
 txTextCursor (false);
 return 0;
